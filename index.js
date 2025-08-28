@@ -41,17 +41,17 @@ function clearHistory() {
   document.getElementById("callHistory").innerHTML = "";
 }
 
-let copyCount =0;
+let copyCount = 0;
 function copyNumber(number) {
-        navigator.clipboard
-          .writeText(number)
-          .then(() => {
-            alert(`Copied ${number} to clipboard!`);
-            copyCount++;
-            document.getElementById("copy-count").textContent = copyCount;
-          })
-          .catch((err) => {
-            alert("Failed to copy!");
-            console.error(err);
-          });
-      }
+  navigator.clipboard
+    .writeText(number)
+    .then(() => {
+      alert(`Copied ${number} to clipboard!`);
+      copyCount++;
+      document.getElementById("copy-count").textContent = copyCount;
+    })
+    .catch((err) => {
+      alert("Failed to copy!");
+      console.error(err);
+    });
+}
